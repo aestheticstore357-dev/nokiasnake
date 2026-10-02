@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Nokia Snake - Muhammad Shazin C</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="startScreen" class="screen start-screen">
+      <div class="top-label">CLASSIC SNAKE</div>
+      <h1>SNAKE_</h1>
+      <p class="subtitle">A simple Nokia-style snake game.</p>
+      <div class="snake-art" aria-hidden="true"><span></span><span></span><span></span><span></span><b></b></div>
+      <div class="creator">Created by <strong>Muhammad Shazin C</strong><br>Contact: <a href="tel:9400701146">9400701146</a></div>
+      <button id="startBtn" class="start-btn">START GAME</button>
+      <p class="hint">SWIPE OR USE ARROW KEYS</p>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen hidden">
+      <header class="game-header">
+        <button id="backBtn" class="small-btn">← BACK</button>
+        <div class="score">SCORE: <span id="score">0</span></div>
+      </header>
+
+      <div class="board-wrap">
+        <canvas id="gameCanvas" width="480" height="480"></canvas>
+        <div id="gameOver" class="game-over hidden">
+          <h2>GAME OVER</h2>
+          <p>Score: <span id="finalScore">0</span></p>
+          <button id="restartBtn" class="start-btn">PLAY AGAIN</button>
+        </div>
+      </div>
+
+      <div class="controls" aria-label="Snake controls">
+        <button data-dir="up">▲</button>
+        <div>
+          <button data-dir="left">◀</button>
+          <button data-dir="down">▼</button>
+          <button data-dir="right">▶</button>
+        </div>
+      </div>
+      <p class="hint">THE SNAKE WRAPS AROUND THE SCREEN</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
